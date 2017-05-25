@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello, WebVR! - A-Frame</title>
+    <title>WebVR Demo</title>
     <meta name="description" content="Hello, WebVR! - A-Frame">
     <meta name="source" content="https://aframe.io/examples/showcase/helloworld/" />
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
@@ -18,6 +18,12 @@
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
       <!--<a-sky color="#ECECEC"></a-sky>-->
       <!--<a-sky src="./equirectangular.png"></a-sky>-->
+      <a-assets>
+        <a-asset-item id="map-obj" src="model/map.obj"></a-asset-item>
+        <a-asset-item id="map-mtl" src="model/map.mtl"></a-asset-item>
+      </a-assets>
+      <a-entity obj-model="obj: #map-obj; mtl: #map-mtl"></a-entity>
+
       <a-entity cubemap="folder: /webvr-demo/img/"></a-entity>
     </a-scene>
   </body>
